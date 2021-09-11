@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4 {
+            color: cornflowerblue;
+        }
+
+        p {
+            color: cornsilk;
+        }
+    </style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <div class="container">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Add Admin</h4>
+            <form (submit)="addAdmin(aForm.value)" #aForm="ngForm">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input type="number" name="adminId" id="adminId" ngModel class="form-control" required
+                        #adminId="ngModel" placeholder="Admin Id"
+                        [class.is-invalid]="adminId.invalid && adminId.touched">
+                    <small *ngIf="adminId.invalid && adminId.touched" class="text-danger">** Name is
+                        Required</small>
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input type="text" name="adminName" id="adminName" ngModel class="form-control" required
+                        #adminName="ngModel" placeholder="Full Name"
+                        [class.is-invalid]="adminName.invalid && adminName.touched">
+                    <small *ngIf="adminName.invalid && adminName.touched" class="text-danger">** Name is
+                        Required</small>
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input type="email" name="adminEmail" id="adminEmail" ngModel class="form-control" required
+                        #adminEmail="ngModel" placeholder="Email Address"
+                        [class.is-invalid]="adminEmail.invalid && adminEmail.touched">
+                    <small *ngIf="adminEmail.invalid && adminEmail.touched" class="text-danger">** Email is
+                        Required</small>
+                </div> <!-- form-group// -->
+
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                    </div>
+                    <select class="custom-select" style="max-width: 120px;">
+                        <option selected="">+91</option>
+                        <option value="1">+972</option>
+                        <option value="2">+198</option>
+                        <option value="3">+701</option>
+                    </select>
+                    <input type="number" name="adminContact" id="adminContact" ngModel class="form-control"
+                        required #adminContact="ngModel" placeholder="Phone number"
+                        [class.is-invalid]="adminContact.invalid && adminContact.touched">
+                    <small *ngIf="adminContact.invalid && adminContact.touched" class="text-danger">** Contact is
+                        Required</small>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input type="password" name="adminPassword" id="adminPassword" ngModel class="form-control"
+                        required #adminPassword="ngModel" placeholder="Create password" type="password"
+                        [class.is-invalid]="adminPassword.invalid && adminPassword.touched">
+                    <small *ngIf="adminPassword.invalid && adminPassword.touched" class="text-danger">** Password
+                        is
+                        Required</small>
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input type="date" name="adminDob" id="adminDob" ngModel class="form-control" required
+                        #adminDob="ngModel" placeholder="Date Of Birth" [class.is-invalid]="adminDob.invalid && adminDob.touched"/>
+                    <small *ngIf="adminDob.invalid && adminDob.touched" class="text-danger">** Date Of Birth is
+                        Required</small>
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Add Admin </button>
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a href="login">Log In</a> </p>
+                
+            </form>
+
+        </article>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4 {
+            color: cornflowerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <div class="container">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Add Movie</h4>
+            <form (submit)=addM(mForm.value) #mForm=ngForm>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-camera"></i> </span>
+                    </div>
+                    <input type="number" name="movieId" id="movieId" ngModel class="form-control" required
+                        #movieId="ngModel" placeholder="Movie Id"
+                        [class.is-invalid]="movieId.invalid && movieId.touched">
+                    <small *ngIf="movieId.invalid && movieId.touched" class="text-danger">** Movie Id is
+                        Required</small>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <input type="number" name="theaterId" id="theaterId" ngModel class="form-control" required #theaterId="ngModel"
+                    placeholder="Theater Id" [class.is-invalid]="theaterId.invalid && theaterId.touched"
+                    >
+                    <small *ngIf="theaterId.invalid && theaterId.touched" class="text-danger">** Theater Id is Required</small>
+                         </div> <!-- form-group// -->                     
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-camera"></i> </span>
+                    </div>
+                    <input type="text" name="movieName" id="movieName" ngModel class="form-control" required
+                        #movieName="ngModel" placeholder="Movie Name"
+                        [class.is-invalid]="movieName.invalid && movieName.touched">
+                    <small *ngIf="movieName.invalid && movieName.touched" class="text-danger">** Movie Name is
+                        Required</small>
+
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+
+                    <input type="test" name="movieDirector" id="movieDirector" ngModel class="form-control" required
+                        #movieDirector="ngModel" placeholder="Movie Director Name"
+                        [class.is-invalid]="movieDirector.invalid && movieDirector.touched">
+                    <small *ngIf="movieDirector.invalid && movieDirector.touched" class="text-danger">** Movie Director
+                        is Required</small>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                    </div>
+
+                    <input type="number" name="movieLength" id="movieLength" ngModel class="form-control" required
+                        #movieLength="ngModel" placeholder="Movie Length"
+                        [class.is-invalid]="movieLength.invalid && movieLength.touched">
+                    <small *ngIf="movieLength.invalid && movieLength.touched" class="text-danger">** Movie Length is
+                        Required</small>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-language"></i> </span>
+                    </div>
+                    <input type="text" name="languages" id="languages" ngModel class="form-control" required
+                        #languages="ngModel" placeholder="Languages"
+                        [class.is-invalid]="languages.invalid && languages.touched">
+                    <small *ngIf="languages.invalid && languages.touched" class="text-danger">**Languages is
+                        Required</small>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                    </div>
+                    <input type="date" name="movieReleaseDate" id="movieReleaseDate" ngModel class="form-control"
+                        required #movieReleaseDate="ngModel" placeholder="Movie Release Date"
+                        [class.is-invalid]="movieReleaseDate.invalid && movieReleaseDate.touched">
+                    <small *ngIf="movieReleaseDate.invalid && movieReleaseDate.touched" class="text-danger">**Movie
+                        Release Date is Required</small>
+                </div> <!-- form-group// -->
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Add Movie </button>
+
+
+                </div> <!-- form-group// -->
+            </form>
+        </article>
+
+
+    </div>
+    <!--container end.//-->
+</body>
+
+</html>

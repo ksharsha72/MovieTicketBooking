@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ h4{
+            color:cornflowerblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <div class="container">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Welcome</h4>
+            <form>
+                <form (submit)="showT()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Show Theater </button>
+                    </div> <!-- form-group// -->
+                </form>
+                <form (submit)="showM()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block" > Show Movie
+                        </button>
+                    </div>
+                </form>
+                <form (submit) ="showTC()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block" > Show
+                            Theater In City </button>
+                    </div>
+                </form>
+                <form (submit) ="showMT()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block" > Show
+                            Movie In Theater </button>
+                    </div>
+                </form>
+            </form>
+        </article>
+
+    </div>
+    <!--container end.//-->
+    <div class="container1">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+        <form (submit)="logOut()">
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Logout
+                </button>
+            </div>
+        </form>
+        </article>
+    </div>
+</body>
+
+</html>

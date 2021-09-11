@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h4{
+        color:cornflowerblue;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+    <div class="container">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Welcome Admin...!</h4>
+            <form>
+                <form (submit)="addTheater()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Add Theater </button>
+                    </div> <!-- form-group// -->
+                </form>
+                <form (submit)="addMovie()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block" > Add Movie
+                        </button>
+                    </div>
+                </form>
+                <form (submit)="deleteTheater()">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block" > Delete
+                            Theater </button>
+                    </div>
+                </form>
+                <form (submit)="deleteMovie()">
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Delete Movie
+                        </button>
+                    </div>
+                </form>
+                <form (submit)="addAdmin()">
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Add Admin
+                        </button>
+                    </div>
+                </form>
+                <form (submit)="showAllAdmin()">
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Show All Admin
+                        </button>
+                    </div>
+                </form>
+                <form (submit)="showAllCustomer()">
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary btn-block"> Show All Customers
+                        </button>
+                    </div>
+                </form>
+            </form>
+        </article>
+
+    </div>
+
+    <div class="container1">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+        <form (submit)="logOut()">
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Logout
+                </button>
+            </div>
+        </form>
+        </article>
+    </div>
+    
+</body>
+
+</html>

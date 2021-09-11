@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h4{
+            color:cornflowerblue;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Add Theater</h4>
+	<form (submit)=addTheater(tForm.value) #tForm = ngForm>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            </div>
+            <input type="number" name="theaterId" id="theaterId" ngModel class="form-control" required #theaterId="ngModel"
+            placeholder="Theater Id" [class.is-invalid]="theaterId.invalid && theaterId.touched"
+            >
+            <small *ngIf="theaterId.invalid && theaterId.touched" class="text-danger">** Theater Id is Required</small>
+                 </div> <!-- form-group// -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		 </div>
+        <input type="text" name="theaterName" id="theaterName" ngModel class="form-control" required #theaterName="ngModel"
+         placeholder="Theater Name" [class.is-invalid]="theaterName.invalid && theaterName.touched"
+         >
+         <small *ngIf="theaterName.invalid && theaterName.touched" class="text-danger">** Theater Name is Required</small>
+        
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-map"></i> </span>
+		 </div>
+        <input type="test" name="theaterCity" id="theaterCity" ngModel class="form-control" required #theaterCity ="ngModel" 
+          placeholder="Theater City" [class.is-invalid]="theaterCity.invalid && theaterCity.touched"
+          >
+          <small *ngIf="theaterCity.invalid && theaterCity.touched" class="text-danger">** Theater City is Required</small>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+91</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		</select>
+    	<input type="number" name="managerContact" id="managerContact" ngModel class="form-control" required #managerContact="ngModel" 
+         placeholder="Manager Contact Phone number" [class.is-invalid]="managerContact.invalid && managerContact.touched"
+         >
+         <small *ngIf="managerContact.invalid && managerContact.touched" class="text-danger">** Manager Contact is Required</small>
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		</div>
+        <input type="managerName" name="managerName" id="managerName" ngModel class="form-control" required #managerName="ngModel" 
+         placeholder="Manager Name" [class.is-invalid]="managerName.invalid && managerName.touched"
+         >
+         <small *ngIf="managerName.invalid && managerName.touched" class="text-danger">** Manager Name is Required</small>
+    </div> <!-- form-group// -->                                      
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Add Theater  </button>
+
+        
+    </div> <!-- form-group// -->      
+</form>
+</article>
+
+
+</div> 
+<!--container end.//-->
+</body>
+</html>

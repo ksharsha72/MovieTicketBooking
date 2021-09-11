@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+  tr
+  {
+    background-color:rgb(173, 173, 194);
+    color:rgb(37, 60, 163);
+  }
+  th
+  {
+    background-color:rgb(170, 170, 184);
+    color:rgb(70, 88, 194);
+  }
+
+    </style>
+
+</head>
+<body>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Theater Id</th>
+                <th>Movie Id</th>
+                <th>Movie Name</th>
+                <th>Movie Director</th>
+                <th>Movie Length</th>
+                <th>Languages</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr [ngStyle]="{'background-color':getBackgroundColor(person.age)}"> -->
+                <tr  *ngFor="let p of movieList">
+                    <td> {{p.movieId}}</td>
+                    <td> {{p.theaterId}}</td>
+                    <td>
+                        {{p.movieName}}
+                    </td>
+                   <td>{{p.movieDirector}}</td>
+                    <td>{{p.movieLength}}</td>
+                    <td>{{p.languages}}</td>
+                    <td>{{p.movieReleaseDate}}</td>
+                </tr>
+        </tbody>
+    
+    
+    
+    </table>
+    
+    <div class="container1">
+    
+        <article class="card-body mx-auto" style="max-width: 400px;">
+        <form (submit)="back()">
+    
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Back
+                </button>
+            </div>
+        </form>
+        </article>
+    </div>
+    
+</body>
+</html>
